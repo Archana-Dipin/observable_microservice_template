@@ -44,7 +44,6 @@ Make sure the following tools are installed:
 
 - Docker
 - Docker Compose
-- Git
 
 ### 1. Clone the repository
 
@@ -208,9 +207,6 @@ observable_microservice_template/
 │   └── logging_config.py
 ├── tests/
 │   └── test_basics.py
-├── .github/
-│   └── workflows/
-│       └── ci.yml
 ├── Dockerfile
 ├── docker-compose.yml
 ├── prometheus.yml
@@ -248,23 +244,6 @@ If dependencies are not installed locally, install them first:
 pip install -r requirements.txt
 ```
 
-## CI
-
-The repository can include a GitHub Actions workflow at `.github/workflows/ci.yml`.
-
-A typical CI pipeline will:
-
-- run on `push` and `pull_request`
-- install Python dependencies
-- run tests with `pytest`
-- optionally validate the Docker build
-
-Example commands CI is expected to run:
-
-```bash
-pip install -r requirements.txt
-pytest
-```
 
 ## Local Demo Checklist
 
@@ -367,6 +346,4 @@ Suggested evidence files:
 - Add linting and formatting checks in CI
 - Add OpenAPI request examples directly in route definitions
 
-## License
 
-Add a license section here if you plan to publish the repository publicly.
